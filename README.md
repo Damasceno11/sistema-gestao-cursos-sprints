@@ -142,13 +142,13 @@ public void inserir(Estudante estudante) {
 🖼 Capturas de Tela da Interface
 
 📌 1. Cadastro de Curso com Enum  
-![Cadastro Curso](Interfa-cadastro-curso-enum.png)
+![Cadastro Curso](docs/Interfa-cadastro-curso-enum.png)
 
 📌 2. Cadastro de Turma com Enum  
-![Cadastro Turma](Interfa-cadastro-turma-enum.png)
+![Cadastro Turma](docs/Interfa-cadastro-turma-enum.png)
 
 📌 3. Lista de Estudantes com Curso Vinculado  
-![Lista Estudantes](Interfa-lista-estudante-curso.png)
+![Lista Estudantes](docs/Interfa-lista-estudante-curso.png)
 
 
 📊 Vantagens e Dificuldades da Metodologia Ágil
