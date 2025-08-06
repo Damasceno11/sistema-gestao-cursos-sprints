@@ -107,6 +107,7 @@ public void inserir(Turma turma) {
         throw new RuntimeException("Erro ao inserir turma: " + e.getMessage(), e);
     }
 }
+
 ```
 
 💡 **Importância:** Assim como no curso, exige `::periodo_enum` para compatibilidade.
@@ -138,6 +139,36 @@ public void inserir(Estudante estudante) {
     }
 }
 ```
+
+📌 Desafios Técnicos e Soluções
+Durante o desenvolvimento do Sistema de Gestão de Cursos com Java + PostgreSQL, surgiram dois desafios principais que precisaram ser solucionados para garantir a integração correta entre o sistema e o banco de dados.
+
+1. Problema com Enums no PostgreSQL
+O PostgreSQL utiliza tipos ENUM nativos (nivel_enum e periodo_enum), mas ao tentar salvar diretamente com PreparedStatement.setString(), ocorria erro de conversão, pois o banco exige um tipo específico.
+
+✅ Solução adotada:
+
+Ajustar as queries para utilizar conversão explícita (?::nivel_enum e ?::periodo_enum).
+
+Utilizar enum.name() no Java para garantir que o valor enviado corresponda exatamente ao formato salvo no banco (sem acentos e no padrão maiúsculo).
+
+💡 Isso garantiu que valores como "Básico" fossem convertidos corretamente para BASICO no momento da inserção.
+
+2. Problema na Captura do ID do Estudante
+Ao inserir um novo estudante, era necessário capturar automaticamente o ID (código) gerado pelo banco, pois ele é usado como chave primária em outras tabelas.
+Sem isso, não seria possível manter o vínculo correto com outros registros, como matrículas e turmas.
+
+✅ Solução adotada:
+
+Alterar o SQL de inserção para incluir RETURNING codigo.
+
+Ler o valor retornado imediatamente após a execução com ResultSet e definir no objeto Java.
+
+💡 Isso garantiu que o ID recém-gerado estivesse disponível assim que o estudante fosse cadastrado.
+
+📎 Resumo:
+Essas adaptações foram cruciais para que o sistema conseguisse persistir corretamente os dados, respeitar os tipos ENUM do PostgreSQL e capturar IDs automaticamente, garantindo total consistência entre a interface gráfica, os métodos DAO e o banco de dados.
+
 
 🖼 Capturas de Tela da Interface
 
