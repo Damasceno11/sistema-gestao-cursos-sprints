@@ -139,43 +139,39 @@ public void inserir(Estudante estudante) {
 }
 ```
 
-💡 **Importância:** `RETURNING codigo` foi essencial para capturar automaticamente a PK gerada no momento da inserção.
+🖼 Capturas de Tela da Interface
 
-## 🖼 Capturas de Tela da Interface
+📌 1. Cadastro de Curso com Enum  
+![Cadastro Curso](Interfa-cadastro-curso-enum.png)
 
-📌 **1. Cadastro de Curso com Enum**  
-![Cadastro Curso](docs/Interfa-cadastro-curso-enum.png)
+📌 2. Cadastro de Turma com Enum  
+![Cadastro Turma](Interfa-cadastro-turma-enum.png)
 
-📌 **2. Cadastro de Turma com Enum**  
-![Cadastro Turma](docs/Interfa-cadastro-turma-enum.png)
-
-📌 **3. Lista de Estudantes com Curso Vinculado**  
-![Lista Estudantes](docs/Interfa-lista-estudante-curso.png)
+📌 3. Lista de Estudantes com Curso Vinculado  
+![Lista Estudantes](Interfa-lista-estudante-curso.png)
 
 
-## 📊 Vantagens e dificuldades da Metodologia Ágil
+📊 Vantagens e Dificuldades da Metodologia Ágil
 
-**Vantagens**
+✅ **Vantagens**
+- Entregas rápidas e incrementais
+- Feedback constante e adaptação às mudanças
+- Melhor comunicação entre membros da equipe
+- Mais fácil de identificar e corrigir erros cedo
 
-* Entregas rápidas e incrementais
-* Feedback constante e adaptação às mudanças
-* Melhor comunicação entre membros da equipe
-* Mais fácil de identificar e corrigir erros cedo
+⚠️ **Dificuldades**
+- Exige disciplina e comprometimento com prazos
+- Necessário bom entendimento das tarefas para evitar retrabalho
+- Para equipes pequenas, algumas cerimônias podem ser sobrecarregantes
+- Integração contínua requer atenção constante a testes
 
-**Dificuldades**
 
-* Exige disciplina e comprometimento com prazos
-* Necessário bom entendimento das tarefas para evitar retrabalho
-* Para equipes pequenas, algumas cerimônias podem ser sobrecarregantes
-* Integração contínua requer atenção constante a testes
+👤 Autor  
+**Pedro Paulo Damasceno Muniz**  
+Estudante de Análise e Desenvolvimento de Sistemas – Uniasselvi – Blumenau  
+Participante do treinamento intensivo +Devs2Blu – Blumenau  
+📌 GitHub: [https://github.com/Damasceno11](https://github.com/Damasceno11)  
+📌 LinkedIn: [https://www.linkedin.com/in/pedro-paulo-damasceno-muniz](https://www.linkedin.com/in/pedro-paulo-damasceno-muniz)
 
----
-
-## 👤 Autor
-
-**Pedro Paulo Damasceno Muniz**
-Estudante de Análise e Desenvolvimento de Sistemas – Uniasselvi – Blumenau
-Participante do treinamento intensivo +Devs2Blu – Blumenau
-GitHub: [https://github.com/Damasceno11](https://github.com/Damasceno11)
 
 
