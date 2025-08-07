@@ -41,28 +41,29 @@ O projeto foi desenvolvido seguindo a **Metodologia Ágil (Scrum)**, com divisã
 
 ## 📅 Planejamento Ágil - Sprints
 
-| Sprint | Descrição                                                     | Desenvolvedor(es)          | Período Desenvolvimento | Testes | Revisão | Deploy | Observações                        |
-| ------ | ------------------------------------------------------------- | -------------------------- | ----------------------- | ------ | ------- | ------ | ---------------------------------- |
-| 1      | Configuração do ambiente Java e PostgreSQL                    | Pedro Paulo, Lucas Andrade | 01/07/2025              | 1 dia  | 1 dia   | 1 dia  | Banco configurado com schemas      |
-| 2      | Criação do banco e tabelas (`curso`, `estudante`, `turma`)    | Lucas Andrade              | 02/07/2025              | 1 dia  | 1 dia   | 1 dia  | Uso de enums no Postgres           |
-| 3      | Implementação da conexão com o PostgreSQL (`ConexaoPostgres`) | Pedro Paulo                | 03/07/2025              | 1 dia  | 1 dia   | 1 dia  | Teste de conexão realizado         |
-| 4      | Modelagem das entidades (`Curso`, `Estudante`, `Turma`)       | Pedro Paulo                | 04/07/2025              | 1 dia  | 1 dia   | 1 dia  | Uso de enums `Nivel` e `Periodo`   |
-| 5      | Implementação do DAO de `Curso`                               | Pedro Paulo                | 05/07/2025              | 1 dia  | 1 dia   | 1 dia  | Persistência em Postgres           |
-| 6      | Implementação do DAO de `Estudante`                           | Pedro Paulo                | 06/07/2025              | 1 dia  | 1 dia   | 1 dia  | Chave estrangeira `curso_codigo`   |
-| 7      | Implementação do DAO de `Turma`                               | Pedro Paulo                | 07/07/2025              | 1 dia  | 1 dia   | 1 dia  | Persistência com enum `Periodo`    |
-| 8      | Interface de cadastro de Cursos (`TelaCadastroCurso`)         | Carla Souza                | 08/07/2025              | 1 dia  | 1 dia   | 1 dia  | Validação de campos                |
-| 9      | Interface de cadastro de Estudantes (`TelaCadastroEstudante`) | Carla Souza                | 09/07/2025              | 1 dia  | 1 dia   | 1 dia  | Código gerado automaticamente      |
-| 10     | Interface de cadastro de Turmas (`TelaCadastroTurma`)         | Carla Souza                | 10/07/2025              | 1 dia  | 1 dia   | 1 dia  | Uso de comboBox para cursos        |
-| 11     | Interface de listagem de Cursos (`TelaListarCursos`)          | Carla Souza                | 11/07/2025              | 1 dia  | 1 dia   | 1 dia  | Ordenação por código               |
-| 12     | Interface de listagem de Estudantes (`TelaListarEstudantes`)  | Carla Souza                | 12/07/2025              | 1 dia  | 1 dia   | 1 dia  | Exclusão por código                |
-| 13     | Interface de listagem de Turmas (`TelaListarTurmas`)          | Carla Souza                | 13/07/2025              | 1 dia  | 1 dia   | 1 dia  | Inclusão de informações do curso   |
-| 14     | Tratamento de enums no banco (`nivel_enum`, `periodo_enum`)   | Pedro Paulo, Lucas Andrade | 14/07/2025              | 1 dia  | 1 dia   | 1 dia  | Uso de `.name()` e `::enum` no SQL |
-| 15     | Ajuste para retorno de IDs e uso de `RETURNING` no SQL        | Pedro Paulo                | 15/07/2025              | 1 dia  | 1 dia   | 1 dia  | Necessário para capturar PK gerada |
-| 16     | Ajuste na exclusão para uso de `codigo` no lugar de CPF       | Pedro Paulo                | 16/07/2025              | 1 dia  | 1 dia   | 1 dia  | Correção de bug de chave primária  |
-| 17     | Testes integrados de todas as funcionalidades                 | Pedro Paulo, Carla Souza   | 17/07/2025              | 1 dia  | 1 dia   | 1 dia  | OK                                 |
-| 18     | Documentação do projeto                                       | Pedro Paulo                | 18/07/2025              | 1 dia  | 1 dia   | 1 dia  | Incluindo README                   |
-| 19     | Otimização e melhorias finais                                 | Pedro Paulo, Carla Souza   | 19/07/2025              | 1 dia  | 1 dia   | 1 dia  | Ajustes de código                  |
-| 20     | Apresentação final do sistema                                 | Toda a equipe              | 20/07/2025              | 1 dia  | 1 dia   | 1 dia  | Projeto pronto                     |
+| Sprint | Tarefa                                                         | Responsável(is)            | Desenvolvimento    | Testes            | Revisão          | Deploy           | Observações                                                            |
+| ------ | -------------------------------------------------------------- | -------------------------- | ------------------ | ----------------- | ---------------- | ---------------- | ---------------------------------------------------------------------- |
+| 1      | Configuração do ambiente Java e PostgreSQL                     | Pedro Paulo, Lucas Andrade | 01/07/2025 (1 dia) | 02/07 (1 dia)     | 03/07 (1 dia)    | 04/07 (1 dia)    | Criação do projeto, estrutura de pacotes, conexão inicial com o banco. |
+| 2      | Criação do banco e tabelas (curso, estudante, turma)           | Lucas Andrade              | 05-06/07 (2 dias)  | 07/07 (1 dia)     | 08/07 (1 dia)    | 09/07 (1 dia)    | Estrutura com chaves estrangeiras e enums no PostgreSQL.               |
+| 3      | Implementação da classe ConexaoPostgres                        | Pedro Paulo                | 10/07 (1 dia)      | 11/07 (1 dia)     | 11/07 (meio dia) | 12/07 (meio dia) | Classe genérica para reuso em todos os DAOs.                           |
+| 4      | Modelagem das entidades (Curso, Estudante, Turma + enums)      | Pedro Paulo                | 13-14/07 (2 dias)  | 15/07 (1 dia)     | 16/07 (1 dia)    | 17/07 (1 dia)    | Uso correto de enums e encapsulamento com boas práticas.               |
+| 5      | DAO completo de Curso (CRUD com PostgreSQL)                    | Pedro Paulo                | 18-19/07 (2 dias)  | 20/07 (1 dia)     | 21/07 (1 dia)    | 22/07 (1 dia)    | Inserção e atualização separadas, uso de código como identificador.    |
+| 6      | DAO completo de Estudante (CRUD + validações)                  | Pedro Paulo                | 23-25/07 (3 dias)  | 26-27/07 (2 dias) | 28/07 (1 dia)    | 29/07 (1 dia)    | Validação de CPF, ligação com Curso, foreign key.                      |
+| 7      | DAO de Turma (CRUD com enum Período e chave estrangeira Curso) | Pedro Paulo                | 30-31/07 (2 dias)  | 01/08 (1 dia)     | 02/08 (1 dia)    | 03/08 (1 dia)    | Uso de enum Periodo, retorno do código de curso.                       |
+| 8      | Interface de cadastro de Curso (Swing)                         | Carla Souza                | 04/08 (1 dia)      | 05/08 (1 dia)     | 05/08 (meio dia) | 06/08 (meio dia) | Validações básicas, campos obrigatórios.                               |
+| 9      | Interface de cadastro de Estudantes (Swing + validações)       | Carla Souza                | 07-08/08 (2 dias)  | 09-10/08 (2 dias) | 11/08 (1 dia)    | 12/08 (1 dia)    | CPF único, associação com curso, campos obrigatórios.                  |
+| 10     | Interface de cadastro de Turma                                 | Carla Souza                | 13/08 (1 dia)      | 14/08 (1 dia)     | 15/08 (1 dia)    | 16/08 (1 dia)    | Uso de ComboBox para seleção de curso e período.                       |
+| 11     | Interface de listagem de Cursos                                | Carla Souza                | 17/08 (meio dia)   | 17/08 (meio dia)  | 18/08 (meio dia) | 18/08 (meio dia) | Ordenação por código, simples iteração.                                |
+| 12     | Interface de listagem de Estudantes                            | Carla Souza                | 19/08 (1 dia)      | 20/08 (1 dia)     | 21/08 (1 dia)    | 21/08 (meio dia) | Inclusão de botão de exclusão e busca por código.                      |
+| 13     | Interface de listagem de Turmas                                | Carla Souza                | 22/08 (1 dia)      | 23/08 (1 dia)     | 24/08 (1 dia)    | 25/08 (1 dia)    | Exibição de curso vinculado à turma.                                   |
+| 14     | Tratamento de enums no banco (nivel\_enum, periodo\_enum)      | Pedro Paulo, Lucas Andrade | 26/08 (1 dia)      | 27/08 (1 dia)     | 28/08 (1 dia)    | 28/08 (meio dia) | Uso de `::enum`, `.name()` e integração JDBC.                          |
+| 15     | Implementar retorno de ID com RETURNING no SQL                 | Pedro Paulo                | 29/08 (1 dia)      | 30/08 (1 dia)     | 31/08 (1 dia)    | 01/09 (1 dia)    | Necessário para usar o código como PK no app.                          |
+| 16     | Ajuste de exclusão usando código no lugar de CPF               | Pedro Paulo                | 02/09 (1 dia)      | 03/09 (1 dia)     | 04/09 (1 dia)    | 04/09 (meio dia) | Correção da lógica de busca e exclusão.                                |
+| 17     | Testes integrados e fluxos completos                           | Pedro Paulo, Carla Souza   | 05-07/09 (3 dias)  | 08-09/09 (2 dias) | 10/09 (1 dia)    | 11/09 (1 dia)    | Testes ponta a ponta de CRUDs e interfaces.                            |
+| 18     | Documentação final (README, DER, Manual de Uso)                | Pedro Paulo                | 12-13/09 (2 dias)  | 14/09 (1 dia)     | 15/09 (1 dia)    | 15/09 (meio dia) | Instruções de execução, prints, estrutura clara.                       |
+| 19     | Otimizações e melhorias finais no código e UI                  | Pedro Paulo, Carla Souza   | 16-18/09 (3 dias)  | 19/09 (1 dia)     | 20/09 (1 dia)    | 21/09 (1 dia)    | Refatoração, melhorias visuais, identação e consistência.              |
+| 20     | Apresentação final do projeto                                  | Toda a equipe              | 22/09 (1 dia)      | -                 | -                | -                | Demonstração para banca com explicações técnicas e práticas.           |
+
 
 ---
 
@@ -172,13 +173,19 @@ Essas adaptações foram cruciais para que o sistema conseguisse persistir corre
 
 🖼 Capturas de Tela da Interface
 
-📌 1. Cadastro de Curso com Enum  
+📌 1. Cadastro de Curso com Enum 
+
+
 ![Cadastro Curso](docs/Interfa-cadastro-curso-enum.png)
 
 📌 2. Cadastro de Turma com Enum  
+
+
 ![Cadastro Turma](docs/Interfa-cadastro-turma-enum.png)
 
 📌 3. Lista de Estudantes com Curso Vinculado  
+
+
 ![Lista Estudantes](docs/Interfa-lista-estudante-curso.png)
 
 
