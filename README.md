@@ -202,7 +202,7 @@ Essas adaptações foram cruciais para que o sistema conseguisse persistir corre
 Estudante de Análise e Desenvolvimento de Sistemas – Uniasselvi – Blumenau  
 Participante do treinamento intensivo +Devs2Blu – Blumenau  
 📌 GitHub: [https://github.com/Damasceno11](https://github.com/Damasceno11)  
-📌 LinkedIn: [https://www.linkedin.com/in/pedro-paulo-damasceno-muniz](https://www.linkedin.com/in/pedro-paulo-damasceno-muniz)
+📌 LinkedIn: [https://www.linkedin.com/in/pedro-paulo-damasceno-muniz](https://www.linkedin.com/in/pedro-damasceno-23b330150/)
 
 
 
